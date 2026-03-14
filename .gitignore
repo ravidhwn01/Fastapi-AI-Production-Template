@@ -11,3 +11,4 @@ mlruns/
 .ruff_cache/
 /_docs
 logs/
+app.log.*

@@ -72,3 +72,7 @@ async def chrome_devtools():
 # )
 
 # print(f"Deployed FastAPI app: {result.id}")
+
+@app.get('/about')
+def about():
+    return {"message": "This is a FastAPI boilerplate for AI/ML projects."}

@@ -76,3 +76,27 @@ async def chrome_devtools():
 @app.get('/about')
 def about():
     return {"message": "This is a FastAPI boilerplate for AI/ML projects."}
+
+
+
+@app.get('/patient/{patient_id}')
+def get_patient(patient_id: int):
+    # load the patient data from database or any data source
+    
+    return {"patient_id": patient_id}
+
+@app.post('/patient')
+def create_patient(name: str, age: int):
+    return {"name": name, "age": age}
+
+@app.put('/patient/{patient_id}')
+def update_patient(patient_id: int, name: str, age: int):
+    return {"patient_id": patient_id, "name": name, "age": age}
+
+@app.delete('/patient/{patient_id}')
+def delete_patient(patient_id: int):
+    return {"message": f"Patient {patient_id} deleted"}
+
+
+
+
